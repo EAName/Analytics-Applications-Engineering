@@ -7,3 +7,14 @@ nbval
 click
 flask
 requests
+numpy
+random
+collections
+pickle
+cv2
+os
+matplotlib
+tensorflow
+seaborn
+scikit-learn
+earth-engine api
