@@ -8,7 +8,7 @@ click
 flask
 requests
 numpy
-cv2
+opencv-python
 os
 matplotlib
 tensorflow
