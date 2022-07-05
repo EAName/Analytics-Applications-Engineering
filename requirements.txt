@@ -8,7 +8,6 @@ click
 flask
 requests
 numpy
-collections
 pickle
 cv2
 os
