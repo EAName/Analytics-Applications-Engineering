@@ -10,10 +10,10 @@ requests
 numpy
 cmake
 scikit-build
-opencv-contrib-python-headless
 os
 matplotlib
 tensorflow
 seaborn
 scikit-learn
 earthengine-api
+opencv-contrib-python-headless
