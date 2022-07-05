@@ -17,4 +17,4 @@ matplotlib
 tensorflow
 seaborn
 scikit-learn
-earth-engine api
+earthengine-api
