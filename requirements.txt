@@ -8,9 +8,6 @@ click
 flask
 requests
 numpy
-cmake
-scikit-build
-os
 matplotlib
 tensorflow
 seaborn
