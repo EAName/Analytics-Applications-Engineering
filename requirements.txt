@@ -8,6 +8,8 @@ click
 flask
 requests
 numpy
+cmake
+scikit-build
 opencv-contrib-python-headless
 os
 matplotlib
