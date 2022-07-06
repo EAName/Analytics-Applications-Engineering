@@ -1,6 +1,6 @@
-from myrepolib import repomod
+from myrepolib import main
 
 
 def test_func():
-    result = repomod.myfunc()
+    result = main.myfunc()
     assert result == 1
