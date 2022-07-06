@@ -1,4 +1,4 @@
-from myrepolib import repomod
+import main
 
 
 def test_func():
