@@ -50,14 +50,14 @@ jobs:
             . venv/bin/activate
             make lint
 
-      # deploy to GCP!
-      - run:
-          name: deploy to app engine
-          command: |
-            echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account 352477506846-compute@developer.gserviceaccount.com --key-file=-
-            gcloud --quiet config set project ${banded-equinox-353115}
-            gcloud --quiet config set compute/zone ${europe-west1-b}
-            cd api-mlresponse && gcloud app deploy
+#       # deploy to GCP!
+#       - run:
+#           name: deploy to app engine
+#           command: |
+#             echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account 352477506846-compute@developer.gserviceaccount.com --key-file=-
+#             gcloud --quiet config set project ${banded-equinox-353115}
+#             gcloud --quiet config set compute/zone ${europe-west1-b}
+#             cd api-mlresponse && gcloud app deploy
 
 
 
