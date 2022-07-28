@@ -15,3 +15,4 @@ scikit-learn
 earthengine-api
 opencv-contrib-python-headless
 gunicorn
+google-cloud-bigquery

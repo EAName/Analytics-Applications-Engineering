@@ -1,8 +1,20 @@
 from flask import Flask
+from flask import json
+import ml_satellite
 
 
 app = Flask(__name__)
 
+@app.route('/get-model')
+def get_model():
+    """Return a friendly HTTP greeting."""
+    result_data = ml_satellite.query_data()
+    response = app.response_class(
+        response=json.dumps(result_data),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
 
 @app.route('/')
 def hello():
