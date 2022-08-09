@@ -13,7 +13,7 @@
 # limitations under the License.
 
 runtime: python
-service: default
+service: production
 env: flex
 entrypoint: gunicorn -b :$PORT main:app
 
