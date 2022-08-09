@@ -5,7 +5,7 @@ client = bigquery.Client()
 
 def query_data():
     query = """
-SELECT * FROM `flight-data-1._bfc2a53340092fabda17f8b6571dc270ec3bc88b.anon4f314c22_b523_4313_bd73_47c5cf38b9f8_imported_data_split_eval_data` LIMIT 1000
+SELECT * FROM `flight-data-1.dsongcp.sat_analytics` LIMIT 1000
 """
     query_job = client.query(query)
 
