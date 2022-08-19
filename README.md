@@ -1,2 +1,2 @@
 # Analytics-Applications-Engineering
-This application uses a convolutional neural network for classification and categorization of objects in satellite imagery. 
+This application software is for use with satellite imagery data. The application software incorporates cloud-based machine learning models to analyze satellite imagery data. DEV and PROD environments are created within the application and can be deployed to the cloud. The DEV environment is for development and the PROD environment is for live, real-time deployment to the end-user. When inputting satellite imagery data, the result will output classification and categorization of the input data. 
