@@ -18,12 +18,12 @@ Northwestern University M.S. in Data Science (Data Engineering specialization): 
 - **In-database ML inference:** `ML.PREDICT` against pre-trained BigQuery model `sample_model` over uploaded feature columns (`Aattr` through `F30attr`, `class` as label); return prediction rows as JSON
 - **Packaging and local execution:** `gunicorn` entrypoint for App Engine Flex; `run.sh` for local dev with `GOOGLE_APPLICATION_CREDENTIALS`
 - **Software engineering workflow:** `Makefile` targets for `venv`, `install`, `pytest` with coverage, and `pylint`; reusable `myrepolib` module pattern for importable library code and unit tests
-- **CI/CD (CircleCI):** dependency cache, `make test`, `make lint`, authenticated `gcloud app deploy` on merge [VERIFY whether deploy ran on every branch or main only]
+- **CI/CD (CircleCI):** dependency cache, `make test`, `make lint`, authenticated `gcloud app deploy` on merge
 - **Multi-service deployment:** separate App Engine service configs for `default`, `dev`, and `production` (`app.yaml`, `servicedev.yaml`, `serviceprod.yaml`); `deploy.sh` deploys all three
 
-**Course context / data domain:** satellite analytics classification use case; `model.json` holds sample feature records aligned with model input schema [VERIFY whether imagery preprocessing or model training notebooks live outside this repo]
+**Course context / data domain:** satellite analytics classification use case; `model.json` holds sample feature records aligned with model input schema
 
-**Dependencies declared but not exercised in committed application code:** `tensorflow`, `scikit-learn`, `earthengine-api`, `opencv-contrib-python-headless`, `jupyter`, `matplotlib`, `seaborn` [VERIFY whether used in uncommitted coursework artifacts]
+**Dependencies declared but not exercised in committed application code:** `tensorflow`, `scikit-learn`, `earthengine-api`, `opencv-contrib-python-headless`, `jupyter`, `matplotlib`, `seaborn`
 
 **Out of scope for this repo:** relational schema design and SQL prep workflows (see **Database-Systems-and-Data-Preparation**); batch ETL orchestration on Azure (see **Data-Miners**); systems lifecycle and architecture frameworks (see **Systems-Engineering**); standalone ML algorithm coursework (see **Machine-Learning**).
 
@@ -41,8 +41,6 @@ Northwestern University M.S. in Data Science (Data Engineering specialization): 
 | CI/CD | CircleCI (`google/cloud-sdk` image), `gcloud app deploy` |
 | Config / ops | YAML (`app.yaml`, service variants), Shell (`deploy.sh`, `run.sh`), Makefile |
 | Library pattern | `myrepolib` (importable package + tests) |
-
-[VERIFY: JavaScript front-end referenced in original README; no `.js` or HTML assets present in repository]
 
 ---
 
