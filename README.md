@@ -1,13 +1,13 @@
 # Analytics-Applications-Engineering
 
-Graduate coursework building a deployable analytics web service that exposes BigQuery-backed satellite classification data and serves in-database ML predictions through a Flask API on Google Cloud Platform.
+Data Engineering specialization capstone (MSDS 434): deployable analytics web service exposing BigQuery-backed satellite classification data and serving in-database ML predictions through a Flask API on Google Cloud Platform.
 
 ---
 
 ## 1. Title and Summary
 
-**Analytics Applications Engineering**  
-Northwestern University M.S. in Data Science (Data Engineering specialization): client-server analytics application with REST endpoints, cloud data warehouse integration, BigQuery ML inference, automated testing/linting, and CI/CD deployment to Google App Engine.
+**Analytics Applications Engineering Capstone**  
+Northwestern University M.S. in Data Science (Data Engineering specialization): individual capstone delivering a production-style client-server analytics application with REST endpoints, cloud data warehouse integration, BigQuery ML inference, automated testing/linting, and CI/CD deployment to Google App Engine.
 
 ---
 
@@ -21,7 +21,7 @@ Northwestern University M.S. in Data Science (Data Engineering specialization): 
 - **CI/CD (CircleCI):** dependency cache, `make test`, `make lint`, authenticated `gcloud app deploy` on merge
 - **Multi-service deployment:** separate App Engine service configs for `default`, `dev`, and `production` (`app.yaml`, `servicedev.yaml`, `serviceprod.yaml`); `deploy.sh` deploys all three
 
-**Course context / data domain:** satellite analytics classification use case; `model.json` holds sample feature records aligned with model input schema
+**Capstone domain:** satellite analytics classification use case; `model.json` holds sample feature records aligned with model input schema
 
 **Dependencies declared but not exercised in committed application code:** `tensorflow`, `scikit-learn`, `earthengine-api`, `opencv-contrib-python-headless`, `jupyter`, `matplotlib`, `seaborn`
 
@@ -70,5 +70,5 @@ Analytics-Applications-Engineering/
 
 ---
 
-**Course context:** Northwestern University, M.S. in Data Science, Data Engineering specialization  
+**Course context:** Northwestern University, M.S. in Data Science, Data Engineering specialization (MSDS 434 capstone)  
 **Repository:** https://github.com/EAName/Analytics-Applications-Engineering
