@@ -25,8 +25,6 @@ Northwestern University M.S. in Data Science (Data Engineering specialization): 
 
 **Dependencies declared but not exercised in committed application code:** `tensorflow`, `scikit-learn`, `earthengine-api`, `opencv-contrib-python-headless`, `jupyter`, `matplotlib`, `seaborn`
 
-**Out of scope for this repo:** relational schema design and SQL prep workflows (see **Database-Systems-and-Data-Preparation**); batch ETL orchestration on Azure (see **Data-Miners**); systems lifecycle and architecture frameworks (see **Systems-Engineering**); standalone ML algorithm coursework (see **Machine-Learning**).
-
 ---
 
 ## 3. Stack
