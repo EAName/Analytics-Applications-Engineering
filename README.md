@@ -1,6 +1,6 @@
 # Analytics-Applications-Engineering
 
-Data Engineering specialization capstone (MSDS 434): deployable analytics web service exposing BigQuery-backed satellite classification data and serving in-database ML predictions through a Flask API on Google Cloud Platform.
+Data Engineering specialization capstone: deployable analytics web service exposing BigQuery-backed satellite classification data and serving in-database ML predictions through a Flask API on Google Cloud Platform.
 
 ---
 
@@ -70,5 +70,5 @@ Analytics-Applications-Engineering/
 
 ---
 
-**Course context:** Northwestern University, M.S. in Data Science, Data Engineering specialization (MSDS 434 — Data Engineering specialization capstone)  
+**Course context:** Northwestern University, M.S. in Data Science, Data Engineering specialization (Data Engineering specialization capstone)  
 **Repository:** https://github.com/EAName/Analytics-Applications-Engineering
