@@ -23,8 +23,6 @@ Northwestern University M.S. in Data Science, Data Engineering specialization: c
 
 **Project domain:** satellite analytics classification use case; `model.json` holds sample feature records aligned with model input schema
 
-**Dependencies declared but not exercised in committed application code:** `tensorflow`, `scikit-learn`, `earthengine-api`, `opencv-contrib-python-headless`, `jupyter`, `matplotlib`, `seaborn`
-
 ---
 
 ## 3. Stack
