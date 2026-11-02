@@ -1,11 +1,18 @@
-from google.cloud import bigquery
-client = bigquery.Client()
+import os
 from datetime import datetime
+
+from google.cloud import bigquery
+
+# BigQuery project.dataset holding sat_analytics, the uploads, and sample_model.
+# Defaults to the dataset used in the original deployment.
+BQ_DATASET = os.environ.get("BQ_DATASET", "flight-data-1.dsongcp")
+
+client = bigquery.Client()
   
 
 def query_data():
-    query = """
-SELECT * FROM `flight-data-1.dsongcp.sat_analytics` LIMIT 1000
+    query = f"""
+SELECT * FROM `{BQ_DATASET}.sat_analytics` LIMIT 1000
 """
     query_job = client.query(query)
 
@@ -29,7 +36,7 @@ def load_csv(csv):
     now = datetime.now()
     timestamp = round(datetime.timestamp(now))
     file_name = f'sat_upload_{timestamp}'
-    table_id = f"flight-data-1.dsongcp.{file_name}"
+    table_id = f"{BQ_DATASET}.{file_name}"
 
     job = client.load_table_from_file(csv,table_id,job_config=job_config)
     job.result()
@@ -38,7 +45,7 @@ def load_csv(csv):
 
     results = query_job.result()
     ml_query = f"""
-    SELECT * FROM ML.PREDICT(MODEL `flight-data-1.dsongcp.sample_model`,
+    SELECT * FROM ML.PREDICT(MODEL `{BQ_DATASET}.sample_model`,
     (
     SELECT class AS label,  
 Aattr AS A,  

@@ -5,7 +5,7 @@ install:
 	pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=myrepolib tests/
+	python -m pytest -vv --cov=myrepolib --cov=main --cov=ml_satellite tests/
 
 lint:
 	pylint --disable=R,C myrepolib  
