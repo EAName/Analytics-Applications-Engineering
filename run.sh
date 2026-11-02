@@ -1,2 +1,4 @@
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/edwin/Desktop/Edwin/Academic/Summer2022/MSDS434/Github/Analytics-Applications-Engineering/secrets/creds.json"
+# Local run. Point GOOGLE_APPLICATION_CREDENTIALS at a service account key with
+# BigQuery access; defaults to ./secrets/creds.json (git-ignored).
+export GOOGLE_APPLICATION_CREDENTIALS="${GOOGLE_APPLICATION_CREDENTIALS:-./secrets/creds.json}"
 python main.py
