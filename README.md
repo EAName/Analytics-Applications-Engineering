@@ -11,7 +11,25 @@ Northwestern University M.S. in Data Science, Data Engineering specialization: c
 
 ---
 
-## 2. Concepts and Methods
+## 2. Featured Project: Satellite Imagery Classification Application (SICA)
+
+A Google Cloud application that automates classification of Landsat imagery, replacing manual labeling with on-demand predictions from a convolutional neural network.
+
+**Architecture:** A Flask API on Google App Engine handles requests to retrieve SICA data and score new imagery against the ML model. BigQuery serves as the data warehouse, organized under the project `sat_model`, with the `dcp_ml` dataset housing the `sat_cnn` model used for training and testing classifications.
+
+**Environments:** Separate development, staging, and production services on App Engine, each defined in its own YAML file with manual scaling policies that control CPU, memory, and disk allocation.
+
+**Data pipeline:** A weekly ETL pipeline, scheduled with cron jobs, batch-updates the datasets.
+
+**CI/CD:** Code is version-controlled on GitHub. CircleCI runs tests and linting on every push, then deploys to App Engine.
+
+**Operations:** Google Cloud Monitoring tracks CPU usage, network bytes, and response counts, and supports log analysis for troubleshooting. Load testing with ApacheBench verified the application under varying workloads, and a cost model forecasts monthly spend so data scientists, data engineers, and DevOps engineers can tune resource usage.
+
+**About this repository:** It contains the Flask service, BigQuery integration, App Engine service configs, and CircleCI pipeline. The staging configuration, scheduled ETL, CNN training, monitoring dashboards, load-test results, and cost model were built in the GCP project and are not included here.
+
+---
+
+## 3. Concepts and Methods
 
 - **Web service design (Flask):** HTTP routes for health check (`/`), read-only analytics export (`GET /get-model`), and CSV upload with prediction response (`POST /satellite-model`); JSON responses via `app.response_class`
 - **Cloud data warehouse integration (BigQuery):** `google-cloud-bigquery` client; query existing `sat_analytics` table; load uploaded CSV into ephemeral tables with autodetect schema, `WRITE_TRUNCATE`, and timestamped table names
@@ -25,7 +43,7 @@ Northwestern University M.S. in Data Science, Data Engineering specialization: c
 
 ---
 
-## 3. Stack
+## 4. Stack
 
 | Layer | Tools |
 |-------|-------|
@@ -40,7 +58,7 @@ Northwestern University M.S. in Data Science, Data Engineering specialization: c
 
 ---
 
-## 4. Structure
+## 5. Structure
 
 ```
 Analytics-Applications-Engineering/
