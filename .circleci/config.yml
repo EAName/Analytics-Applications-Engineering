@@ -25,7 +25,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            apt install -y python3-venv
+            apt-get update && apt-get install -y python3-venv
             python3 -m venv venv
             . venv/bin/activate
             python3 -m pip install --upgrade pip
@@ -49,15 +49,16 @@ jobs:
           command: |
             . venv/bin/activate
             make lint
+            make lint2
 
       # deploy to GCP!
       - run:
           name: deploy to app engine
           command: |
-            echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account banded-equinox-353115@appspot.gserviceaccount.com --key-file=-
+            echo "$GCLOUD_SERVICE_KEY" | gcloud auth activate-service-account --key-file=-
             gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
             gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
-            gcloud app deploy
+            gcloud --quiet app deploy
 
 
 
